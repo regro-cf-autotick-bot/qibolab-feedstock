@@ -21,6 +21,8 @@ requirements:
   run:
     - python >=3.8
     - qibo >=0.1.8
+    - more-itertools
+    - networkx
 
 test:
   imports:
