@@ -23,6 +23,7 @@ requirements:
     - qibo >=0.1.8
     - more-itertools
     - networkx
+    - pyyaml
 
 test:
   imports:
