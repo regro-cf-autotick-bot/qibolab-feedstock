@@ -1,5 +1,5 @@
 {% set name = "qibolab" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/qiboteam/qibolab/archive/v{{ version }}.tar.gz
-  sha256: 069c01a3473109bc4c67c6c3f449663a0a083a75087cb9a40575c1247ba3978e
+  sha256: 662ada8a4684a0e6f9c77275c024648f1286cd9f04f75d6c834595ddfad03f8f
 
 build:
   number: 0
@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python >=3.8,<3.12
     - poetry
   run:
-    - python >=3.8
+    - python >=3.8,<3.12
     - qibo >=0.1.8
     - more-itertools
     - networkx
