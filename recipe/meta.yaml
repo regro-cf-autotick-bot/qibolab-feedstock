@@ -10,23 +10,25 @@ source:
   sha256: 1d6462e374da8670aa4671dbf7f35d6f56b33c1f3cc900e9aa5664ea41225088
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8,<3.12
+    - python {{ python_min }}
     - poetry
   run:
-    - python >=3.8,<3.12
+    - python >={{ python_min }},<3.12
     - qibo >=0.1.8
     - more-itertools
     - networkx
     - pyyaml
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - qibolab
 
